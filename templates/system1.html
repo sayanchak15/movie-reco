@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheet/styles.css')}}" />
+</head>
+<body>
+<h2>Here are top ten popupar movies for you</h2>
+<div id = 'master-system1-images'>  
+    <table>
+        {%for i in range(0, 10, 5)%} 
+                <tr>
+                    <td id="tds1">
+                        <img src="{{url_for('static', filename=images[i])}}"  /> 
+                        <br>
+                        <label id="m-name"> {{movie_names[i]}} </label>
+                    </td>
+                    <td id="tds1">
+                        <img src="{{url_for('static', filename=images[i+1])}}"  />
+                        <br>
+                        <label id="m-name"> {{movie_names[i+1]}} </label>
+                    </td>
+                    <td id="tds1">
+                            <img src="{{url_for('static', filename=images[i+2])}}"  />
+                            <br>
+                            <label id="m-name"> {{movie_names[i+2]}} </label>
+                    </td>
+                    <td id="tds1">
+                            <img src="{{url_for('static', filename=images[i+3])}}"  />
+                            <br>
+                            <label id="m-name"> {{movie_names[i+3]}} </label>
+                    </td>
+                    <td id="tds1">
+                            <img src="{{url_for('static', filename=images[i+4])}}"  />
+                            <br>
+                            <label id="m-name"> {{movie_names[i+4]}} </label>
+                    </td>
+                
+                
+                </tr>
+        {%endfor%} 
+    </table>
+</div> 
+</body>
+</html>

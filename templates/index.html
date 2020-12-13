@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+         <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='stylesheet/styles.css')}}" />
+
+</head>
+<body>
+<tr>
+        <td>
+                        <h1 >Movie Recommender App</h1>
+                        <h2> This is for System 1 </h2>
+
+                        <p id='indexp'>Choose a genre to find most popular</p>
+
+                        <div class = 'System1'>
+                                <form class="upload-form" action="/system1" method="POST"> 
+                                        <div align='center'>
+                                                                <select name="genre" id = 'select-genre' >
+                                                                        <option value ="Sci-Fi">Sci-Fi</option>
+                                                                        <option value ="Film-Noir">Film-Noir</option>
+                                                                        <option value ="Fantasy">Fantasy</option>
+                                                                        <option value ="Horror">Horror</option>
+                                                                        <option value ="Drama">Drama</option>
+                                                                        <option value ="Crime">Crime</option>
+                                                                        <option value ="Romance">Romance</option>
+                                                                        <option value ="Action">Action</option>
+                                                                        <option value ="Musical">Musical</option>
+                                                                        <option value ="Mystery">Mystery</option>
+                                                                        <option value ="Western">Western</option>
+                                                                        <option value ="Thriller">Thriller</option>
+                                                                        <option value ="Children's">Children's</option>
+                                                                        <option value ="Comedy">Comedy</option>
+                                                                        <option value ="Animation">Animation</option>
+                                                                        <option value ="Adventure">Adventure</option>
+                                                                        <option value ="Documentary">Documentary</option>
+                                                                </select> 
+                                                        <button type="submit" class="btn-genre">Select</button>
+                                        </div>
+                                </form>
+                        </div>
+        </td>
+        <td>
+                <div style='background-color:black; height: 5px;  width: 100%'>    </div>
+        </td>
+<h2> This is for System 2 </h2>
+
+<div id = 'master-system2-images' class = 'System2'>
+        <form class="upload-form" action="/system2" method="POST"> 
+                <button id='butn-sys2' type="submit" class="btn-rating">Submit Ratings</button>
+                        <table width="500" border="1" cellpadding="5">
+
+                        {%for i in range(0, 60, 6)%} 
+                        <tr id= 'TR'>
+                                
+                                <td align="center" valign="center">
+                                <input type="hidden" name="mid" value="{{images[i+1]}}">
+                                    <img id= 'sys2-images' src="{{url_for('static', filename=images[i+1])}}" align="middle" />
+                                    <label id="m-name"> {{movie_names[i]}} </label>
+                                    <br><br>
+                                    <label id='rating-label'>Select your Rating</label> 
+                                        <select name="rating" id = 'select-rating' >
+                                                <option value ="0"></option>
+                                                <option value ="1">1</option>
+                                                <option value ="2">2</option>
+                                                <option value ="3">3</option>
+                                                <option value ="4">4</option>
+                                                <option value ="5">5</option>
+                                        </select> 
+                                <br />
+                                
+                                </td>
+                                
+                                <td align="center" valign="center">
+                                <input type="hidden" name="mid" value="{{images[i+2]}}">
+                                    <img src="{{url_for('static', filename=images[i+2])}}" align="middle" />
+                                    <label id="m-name"> {{movie_names[i+1]}} </label>
+                                    <br><br>
+                                    <label id='rating-label'>Select your Rating</label> 
+                                        <select name="rating" id = 'select-rating' >
+                                                <option value ="0"></option>
+                                                <option value ="1">1</option>
+                                                <option value ="2">2</option>
+                                                <option value ="3">3</option>
+                                                <option value ="4">4</option>
+                                                <option value ="5">5</option>
+                                        </select> 
+                                    
+                                <br />
+
+                                </td>
+                            
+                                <td align="center" valign="center">
+                                <input type="hidden" name="mid" value="{{images[i+3]}}">
+                                    <img src="{{url_for('static', filename=images[i+3])}}" align="middle" />
+                                    <label id="m-name"> {{movie_names[i+2]}} </label>
+                                    <br><br>
+                                    <label id='rating-label'>Select your Rating</label> 
+                                        <select name="rating" id = 'select-rating' >
+                                                <option value ="0"></option>
+                                                <option value ="1">1</option>
+                                                <option value ="2">2</option>
+                                                <option value ="3">3</option>
+                                                <option value ="4">4</option>
+                                                <option value ="5">5</option>
+                                        </select> 
+                                <br />
+                            
+                                </td>
+                                <td align="center" valign="center">
+                                        <input type="hidden" name="mid" value="{{images[i+4]}}">
+                                        <img src="{{url_for('static', filename=images[i+4])}}" align="middle" />
+                                        <label id="m-name"> {{movie_names[i+3]}} </label>
+                                        <br><br>
+                                        <label id='rating-label'>Select your Rating</label> 
+                                     
+                                                <select name="rating" id = 'select-rating' >
+                                                        <option value ="0"></option>
+                                                        <option value ="1">1</option>
+                                                        <option value ="2">2</option>
+                                                        <option value ="3">3</option>
+                                                        <option value ="4">4</option>
+                                                        <option value ="5">5</option>
+                                                </select> 
+                                                <br />
+                                              
+                                </td>
+                                <td align="center" valign="center">
+                                        <input type="hidden" name="mid" value="{{images[i+5]}}">
+                                        <img src="{{url_for('static', filename=images[i+5])}}" align="middle" />
+                                        <label id="m-name"> {{movie_names[i+4]}} </label>
+                                        <br><br>
+                                        <label id='rating-label'>Select your Rating</label> 
+                                                <select name="rating" id = 'select-rating' >
+                                                        <option value ="0"></option>
+                                                        <option value ="1">1</option>
+                                                        <option value ="2">2</option>
+                                                        <option value ="3">3</option>
+                                                        <option value ="4">4</option>
+                                                        <option value ="5">5</option>
+                                                </select> 
+                                        <br />
+                                                
+                                </td>
+                                <td align="center" valign="center">
+                                        <input type="hidden" name="mid" value="{{images[i+6]}}">
+                                        <img id= 'sys2-images' src="{{url_for('static', filename=images[i+6])}}" align="middle" />
+                                        <label id="m-name"> {{movie_names[i]}} </label>
+                                         <br><br>    
+                                        <label id='rating-label'>Select your Rating</label> 
+                                        <select name="rating" id = 'select-rating' >
+                                                <option value ="0"></option>
+                                                <option value ="1">1</option>
+                                                <option value ="2">2</option>
+                                                <option value ="3">3</option>
+                                                <option value ="4">4</option>
+                                                <option value ="5">5</option>
+                                        </select> 
+                                                <br />
+                                </td>
+                                                
+                        </tr>
+                        {%endfor%} 
+                            
+                        </table>
+                        
+
+                </div>
+
+        </form>
+
+</tr>
+</body>
+
+</html>

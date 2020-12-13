@@ -1,0 +1,31 @@
+
+<div id="images_div">
+
+<table width="500" border="1" cellpadding="5">
+
+    {%for i in range(0, 5, 3)%} 
+    <tr>
+    
+    <td align="center" valign="center">
+        <img src="{{url_for('static', filename=images[i+1])}}" align="middle" />
+    <br />
+    Caption text centered under the image.
+    </td>
+    
+    <td align="center" valign="center">
+        <img src="{{url_for('static', filename=images[i+2])}}" align="middle" />
+    <br />
+    Caption text centered under the image.
+    </td>
+
+    <td align="center" valign="center">
+        <img src="{{url_for('static', filename=images[i+3])}}" align="middle" />
+    <br />
+    Caption text centered under the image.
+    </td>
+    
+    </tr>
+    {%endfor%} 
+
+    </table>
+  </div>
