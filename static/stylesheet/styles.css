@@ -1,0 +1,65 @@
+body {
+  background-color: white;
+}
+
+
+h1 {
+  color: black;
+  text-align: center;
+  font-size: 50px;
+}
+
+h2 {
+  color:black; 
+  text-align: center;
+  font-size: 30px;
+}
+
+#indexp{
+  color: blue;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 5%;
+}
+
+#select-genre {
+  width:250px; 
+  height: 30px;
+  margin-bottom: 3%;
+}
+
+#master-system2-images{
+  position: relative;
+  margin-left: 15%;
+}
+
+#rating-label{
+  color: blue;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#butn-sys2 {
+
+  height: 50px;
+  border: 3px solid green;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 35%;
+
+}
+
+#m-name {
+  font-weight: bold;
+  max-width: 40px; 
+  word-wrap: break-word;
+}
+
+#master-system1-images{
+  position: relative;
+  margin-left: 15%;
+}
+
+#tds1{
+  width: 140px;
+}
